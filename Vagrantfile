@@ -9,10 +9,11 @@ Vagrant.configure(2) do |config|
 
     trusty64.vm.provider :virtualbox do |vb|
       vb.gui = false
-      vb.memory = (1 * 2048)
-      vb.cpus = 4
+      vb.memory = (2 * 2048)
+      vb.cpus = 2
     end
 
-    trusty64.vm.synced_folder "/Users/pyk/github.com", "/home/vagrant/go/src/github.com", type: "nfs"
+    trusty64.vm.synced_folder "/Users/pyk/github.com", "/home/vagrant/go/src/github.com"
   end
+#  config.ssh.forward_x11 = true
 end
